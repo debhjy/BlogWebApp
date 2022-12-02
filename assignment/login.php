@@ -1,5 +1,10 @@
 <?php 
 session_start();
+
+if (!isset($_SESSION['username']) ) {
+  header("Location: login.php");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +42,7 @@ session_start();
 
   <?php
 if($_SESSION['error']=='yes'){
-    echo "<span>Login Invalid</span>";
+    echo "<div id=\"errormessage\">Login Invalid</div>";
 };
   ?>
 

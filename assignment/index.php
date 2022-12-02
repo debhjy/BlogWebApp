@@ -75,23 +75,35 @@ session_start();
             $sql = "SELECT `title`, `post`, `date` FROM `posts` WHERE `user`= \"$user\" ORDER BY id DESC;";
             $result = $conn->query($sql);
             // echo $sql;
-            ?>
-<table>
+
+
+            if ($result->num_rows > 0) {
+                
+    ?>  <table>
     <?php  
+
         foreach ($result as $row) {
     ?>          
             <th><img id="postpic" src="journal.png"> <?php echo $row['title']. "<br>"."<br>"?></th>
             <tr><td><?php echo $row['post']. "<br>"."<br>"?></td></tr>
             <tr><td id="daterow"><?php echo $row['date']. "<br>"."<br>"?></td></tr>         
     <?php
-        }
+         }
     ?>
 </table>
+<?php
+
+    } else {
+        echo "<p>No posts yet! Start composing by clicking on the '+ New Post' button up top.</p>";
+    }   
+
+            ?>
+
 <?php
         }
         else
         {
-            echo "No posts yet!";
+            echo "Please log in.";
         }
       
 ?>
