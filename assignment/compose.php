@@ -27,6 +27,7 @@ session_start();
     <ul>
     <li><a href="index.php">Home</a></li>
   <li><a href="compose.php" id="newpost" > + New Post</a>  </li>
+  <li><a href="logout.php" id="logout" > Logout</a>  </li>
 </ul>
 
 

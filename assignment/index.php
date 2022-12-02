@@ -1,5 +1,9 @@
 <?php 
 session_start();
+
+if (!isset($_SESSION['username']) ) {
+    header("Location: login.php");
+  }
 ?>
 
 <!DOCTYPE html>
@@ -23,15 +27,9 @@ session_start();
     
         <h1> Journal of  
 
-        <?php
-            if ( isset( $_SESSION['username']))
-            {
-                echo $_SESSION['username'];
-            }
-            else
-            {
-                echo "New User";
-            }
+        <?php        
+                echo ucfirst($_SESSION['username']);
+
          ?>
 
         </h1>
@@ -41,6 +39,7 @@ session_start();
     <ul>
     <li><a href="index.php">Home</a></li>
   <li><a href="compose.php" id="newpost" > + New Post</a>  </li>
+  <li><a href="logout.php" id="logout" > Logout</a>  </li>
 </ul>
 
 
@@ -74,9 +73,6 @@ session_start();
 
             $sql = "SELECT `title`, `post`, `date` FROM `posts` WHERE `user`= \"$user\" ORDER BY id DESC;";
             $result = $conn->query($sql);
-            // echo $sql;
-
-
             if ($result->num_rows > 0) {
                 
     ?>  <table>
@@ -101,10 +97,7 @@ session_start();
 
 <?php
         }
-        else
-        {
-            echo "Please log in.";
-        }
+
       
 ?>
 </body>
