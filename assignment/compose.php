@@ -15,6 +15,8 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,300&display=swap"
         rel="stylesheet">
     <script src="script.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <title>Compose</title>
 </head>
 
@@ -66,7 +68,7 @@ session_start();
                 <input type="date" readonly value="<?php echo date("Y-m-d"); ?>" name="date" required><br>
             </div>
             <div>
-                <button type="submit" id="submit">Publish</button>
+                <button type="submit" id="submitpost">Publish</button>
             </div>
         </form>
 
@@ -95,6 +97,23 @@ if (isset($_REQUEST['title']) && isset($_REQUEST['post'])) {
     $query->bind_param("ssss", $title, $text, $date, $user);
     $query->execute();
     $result = $query->get_result();
+
+    if($query)
+    {
+       
+       
+        echo "<script type='text/javascript'>alert('Post published!');</script>";
+
+         
+    
+    }
+    else
+    {
+    echo "<script type='text/javascript'>alert('Something went wrong :(');</script>";
+    
+    }
+
+
 }
 
 ?>

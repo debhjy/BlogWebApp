@@ -24,11 +24,12 @@ time, mark, audio, video {
 
 
 #headerblock{
-    background-color: rgb(235, 205, 205);
+    background-color: rgb(217, 190, 199);
     display: flex;
     justify-content:space-between;
     align-items: center;
     padding: 10px;   
+
 }
 
 #headerend{
@@ -51,14 +52,14 @@ ul {
   
   li a {
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(83, 83, 83);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
 
   li a:hover {
-    color: rgb(103, 20, 220);
+    color: rgb(0, 0, 0);
   }
 
 
@@ -129,6 +130,8 @@ h1{
     margin: 30px;
     font-family: 'Playfair Display';
     font-size: 45px;
+    margin-left: 50px;
+    color: rgb(52, 52, 52);
 }
 
 

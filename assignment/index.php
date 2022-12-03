@@ -26,7 +26,7 @@ if (!isset($_SESSION['username'])) {
 <body>
 
 
-    <!-- header block -->
+<!-- header block -->
     <div id="headerblock">
 
         <h1> Journal of
