@@ -43,6 +43,7 @@ session_start();
                     <h2 class="logintitles">Log In</h2><br><br>
 
                     <?php
+                    
   if ($_SESSION['error'] == 'yes') {
       echo "<div id=\"errormessage\">Login Invalid</div>";
   }
