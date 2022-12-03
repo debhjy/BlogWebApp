@@ -28,24 +28,21 @@ time, mark, audio, video {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    padding: 10px;
-
-
-    
+    padding: 10px;   
 }
+
 #headerend{
     display: flex;
     align-items: center;
     margin-right: 10px;
- 
 }
+
 /* SOURCE: https://www.w3schools.com/css/css_navbar.asp */
 ul {
     list-style-type: none;
     margin-right: 20px;
     padding: 0;
     overflow: hidden;
-
   }
   
   li {
@@ -76,10 +73,7 @@ ul {
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: flex-start;
-    padding: 40px 150px 150px 150px;
-
-    
-    
+    padding: 40px 150px 150px 150px;  
 }
 
 
@@ -87,9 +81,6 @@ ul {
 table{
     color: rgb(93, 93, 93);
     
-    
-  
-
 }
 
 
@@ -97,7 +88,6 @@ th, td {
     height: 80px;
     vertical-align: bottom;
    
-
   }
 
 th{
@@ -106,8 +96,6 @@ th{
     font-size: 20px;
     font-weight: 400;
 
-    
- 
 }
 
 
@@ -117,7 +105,6 @@ th{
     font-style: italic;
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(211, 211, 211);
-   
 }
 
 
@@ -125,9 +112,7 @@ th{
     display: flex;
     justify-content: center;
     margin: 50px 100px 100px 100px;
-    
-
-    
+   
 }
 
 #submit{
@@ -277,11 +262,8 @@ align-items: center;
 
 #errormessage{
     color: darkred;
-    animation: horizontal-shaking 1 0.2 1 linear ;
+    animation: horizontal-shaking 1 1 linear ;
     margin-bottom: 20px;
-
-
-   
 
 }
 
